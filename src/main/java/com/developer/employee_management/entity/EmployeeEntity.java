@@ -10,8 +10,12 @@ public class EmployeeEntity {
     private Date dateOfBirth;
     private String address;
 
-    public EmployeeEntity() {
-
+    public EmployeeEntity(Long id, String name, String gender, Date dateOfBirth, String address) {
+        this.id = id;
+        this.name = name;
+        this.gender = gender;
+        this.dateOfBirth = dateOfBirth;
+        this.address = address;
     }
 
 }
