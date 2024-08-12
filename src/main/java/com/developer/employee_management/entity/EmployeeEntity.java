@@ -1,19 +1,19 @@
 package com.developer.employee_management.entity;
 
+import jakarta.persistence.*;
 import java.util.Date;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "mt_employee")
 public class EmployeeEntity {
 
     @Id
-    @GeneratedValue(strategy = )
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "emp_id")
+
     private Long id;
+
+    @Column(name = "name")
     private String name;
     private String gender;
     private Date dateOfBirth;
