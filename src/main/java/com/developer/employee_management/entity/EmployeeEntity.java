@@ -2,8 +2,17 @@ package com.developer.employee_management.entity;
 
 import java.util.Date;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "mt_employee")
 public class EmployeeEntity {
 
+    @Id
+    @GeneratedValue(strategy = )
     private Long id;
     private String name;
     private String gender;
