@@ -15,8 +15,14 @@ public class EmployeeEntity {
 
     @Column(name = "name")
     private String name;
+
+    @Column(name = "gender")
     private String gender;
+
+    @Column(name = "dateOfBirth")
     private Date dateOfBirth;
+
+    @Column(name = "address")
     private String address;
 
     public EmployeeEntity(Long id, String name, String gender, Date dateOfBirth, String address) {
@@ -37,4 +43,5 @@ public class EmployeeEntity {
 
     public String getName() {
         return name;
+    }
 }
