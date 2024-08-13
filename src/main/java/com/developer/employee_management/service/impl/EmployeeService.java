@@ -17,11 +17,13 @@ public class EmployeeService implements EmployeeService {
     }
 
     @Override
-    public void deleteEmployee() {
-
+    public EmployeeEntity saveEmployee(EmployeeEntity employeeEntity) {
+        return null;
     }
 
     @Override
-    public void getEmployee() {
+    public void deleteEmployee(Long id) {
+
     }
+
 }
