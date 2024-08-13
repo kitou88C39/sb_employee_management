@@ -19,7 +19,7 @@ public class EmployeeEntity {
     @Column(name = "gender")
     private String gender;
 
-    @Column(name = "dateOfBirth")
+    @Column(name = "date_of_birth")
     private Date dateOfBirth;
 
     @Column(name = "address")
