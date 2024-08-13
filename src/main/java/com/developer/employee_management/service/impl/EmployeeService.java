@@ -22,6 +22,11 @@ public class EmployeeService implements EmployeeService {
     }
 
     @Override
+    public EmployeeEntity updateEmployee(EmployeeEntity employeeEntity) {
+        return null;
+    }
+
+    @Override
     public void deleteEmployee(Long id) {
 
     }
