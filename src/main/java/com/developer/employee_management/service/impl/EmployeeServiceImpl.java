@@ -5,6 +5,8 @@ import com.developer.employee_management.repository.EmployeeRepository;
 import com.developer.employee_management.service.EmployeeService;
 import org.springframework.stereotype.Service;
 
+import java.util.*;
+
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
 
@@ -20,13 +22,13 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public Optinal<EmployeeEntity> findById(Long id) {
+    public Optional<EmployeeEntity> findById(Long id) {
         return employeeRepository.findById(id);
     }
 
     @Override
     public EmployeeEntity saveEmployee(EmployeeEntity employeeEntity) {
-        return null;
+        return employeeRepository.save(employeeEntity);
     }
 
     @Override
