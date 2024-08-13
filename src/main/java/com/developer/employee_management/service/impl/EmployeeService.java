@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class EmployeeService implements EmployeeService {
     @Override
-    public void createEmployee() {
-
+    public List<EmployeeEntity> findAllEmployee() {
+        return null;
     }
 
     @Override
