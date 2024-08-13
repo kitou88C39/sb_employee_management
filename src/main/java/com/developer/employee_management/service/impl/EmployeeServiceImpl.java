@@ -6,11 +6,12 @@ import com.developer.employee_management.service.EmployeeService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class EmployeeService implements EmployeeService {
+public class EmployeeServiceImpl implements EmployeeService {
 
-    private final EmployeeRepository = employeeRepository;
+    private final EmployeeRepository employeeRepository;
 
-    public EmployeeServiceImpl(EmployeeRepository employeeRepository){
+    // Constructor for dependency injection
+    public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
         this.employeeRepository = employeeRepository;
     }
 
