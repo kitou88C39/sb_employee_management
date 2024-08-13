@@ -33,12 +33,12 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public EmployeeEntity updateEmployee(EmployeeEntity employeeEntity) {
-        return null;
+        return employeeRepository.save(employeeEntity);
     }
 
     @Override
     public void deleteEmployee(Long id) {
-
+        employeeRepository.deleteById(id);
     }
 
 }
