@@ -10,19 +10,18 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     private final EmployeeRepository employeeRepository;
 
-    // Constructor for dependency injection
     public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
         this.employeeRepository = employeeRepository;
     }
 
     @Override
     public List<EmployeeEntity> findAllEmployee() {
-        return null;
+        return employeeRepository.findAll();
     }
 
     @Override
-    public EmployeeEntity findById(Long id) {
-        return null;
+    public Optinal<EmployeeEntity> findById(Long id) {
+        return employeeRepository.findById(id);
     }
 
     @Override
