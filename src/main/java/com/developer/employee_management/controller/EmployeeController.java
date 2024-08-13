@@ -2,6 +2,7 @@ package com.developer.employee_management.controller;
 
 import com.developer.employee_management.entity.EmployeeEntity;
 import com.developer.employee_management.service.EmployeeService;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,7 +18,8 @@ public class EmployeeController {
         this.employeeService = employeeService;
     }
 
+    @GetMapping
     public List<EmployeeEntity> findAllEmployee() {
-        return employeeRepository.findAll();
+        return employeeService.findAllEmployee();
     }
 }
