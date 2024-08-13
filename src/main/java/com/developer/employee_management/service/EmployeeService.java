@@ -11,4 +11,6 @@ public interface EmployeeService {
     EmployeeEntity saveEmployee(EmployeeEntity employeeEntity);
 
     EmployeeEntity updateEmployee(EmployeeEntity employeeEntity);
+
+    void deleteEmployee(Long id);
 }
