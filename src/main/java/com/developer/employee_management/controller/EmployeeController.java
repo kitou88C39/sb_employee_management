@@ -39,10 +39,9 @@ public class EmployeeController {
         return employeeService.saveEmployee(employeeEntity);
     }
 
-    @PutMapping("path/{id}")
-    public String putMethodName(@PathVariable String id, @RequestBody String entity) {
-
-        return entity;
+    @PutMapping
+    public EmployeeEntity updateEmployee(@RequestBody EmployeeEntity employeeEntity) {
+        return employeeService.saveEmployee(employeeEntity);
     }
 
 }
