@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/employee")
@@ -30,4 +32,10 @@ public class EmployeeController {
     public Optional<EmployeeEntity> findAllEmployeeById(@PathVariable("id") Long id) {
         return employeeService.findById(id);
     }
+
+    @PostMapping("path")
+    public String postMethodName(@RequestBody String entity) {
+        return entity;
+    }
+
 }
