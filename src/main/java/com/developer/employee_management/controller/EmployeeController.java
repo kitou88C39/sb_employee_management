@@ -38,4 +38,9 @@ public class EmployeeController {
         return employeeService.saveEmployee(employeeEntity);
     }
 
+    @PostMapping
+    public EmployeeEntity saveEmployee(@RequestBody EmployeeEntity employeeEntity) {
+        return employeeService.saveEmployee(employeeEntity);
+    }
+
 }
