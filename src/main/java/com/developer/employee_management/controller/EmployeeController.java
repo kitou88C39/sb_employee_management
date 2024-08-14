@@ -2,7 +2,10 @@ package com.developer.employee_management.controller;
 
 import com.developer.employee_management.entity.EmployeeEntity;
 import com.developer.employee_management.service.EmployeeService;
+
+import org.apache.el.stream.Optional;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,5 +24,10 @@ public class EmployeeController {
     @GetMapping
     public List<EmployeeEntity> findAllEmployee() {
         return employeeService.findAllEmployee();
+    }
+
+    @GetMapping
+    public Optional<EmployeeEntity> findAllEmployeeById(@PathVariable("id") Long id) {
+        return employeeService.findById(id);
     }
 }
