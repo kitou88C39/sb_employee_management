@@ -33,9 +33,9 @@ public class EmployeeController {
         return employeeService.findById(id);
     }
 
-    @PostMapping("path")
-    public String postMethodName(@RequestBody String entity) {
-        return entity;
+    @PostMapping
+    public EmployeeEntity saveEmployee(@RequestBody EmployeeService employeeService) {
+        return employeeService.saveEmployee(employeeEntity);
     }
 
 }
