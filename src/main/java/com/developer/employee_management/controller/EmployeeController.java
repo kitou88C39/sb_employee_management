@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PutMapping;
 
 @RestController
 @RequestMapping("/employee")
@@ -38,9 +39,10 @@ public class EmployeeController {
         return employeeService.saveEmployee(employeeEntity);
     }
 
-    @PostMapping
-    public EmployeeEntity saveEmployee(@RequestBody EmployeeEntity employeeEntity) {
-        return employeeService.saveEmployee(employeeEntity);
+    @PutMapping("path/{id}")
+    public String putMethodName(@PathVariable String id, @RequestBody String entity) {
+
+        return entity;
     }
 
 }
